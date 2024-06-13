@@ -1,15 +1,9 @@
-import { Stage } from '@pixi/react'
 import '@pixi/events'
 
-import GraphicDemo from './examples/GraphicDemo'
-import SpriteDemo from './examples/SpriteDemo/SpriteDemo'
 import ErrorBoundary from './ErrorBoundary'
-import Game from './Game/Game'
 import './App.css'
-import PattePePatta from './PattePePatta/PattePePatta'
-import Concentration from './Concentration/Concentration'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import WinnerPage from './Concentration/WinnerPage'
+import GinRummy from './GinRummy/GinRummy'
 
 const config = {
   size: { width: window.innerWidth, height: window.innerHeight },
@@ -33,10 +27,11 @@ const App = () => {
     <ErrorBoundary>
       <Router>
         <Routes>
-          <Route path='/' element={<Concentration />} />
-          <Route path='/winner' element={<WinnerPage />} />
+          <Route path='/' element={<GinRummy />} />
+          {/* <Route path='/' element={<Concentration />} />
+          <Route path='/winner' element={<WinnerPage />} /> */}
           {/* <Game /> */}
-          {/* <PattePePatta /> */}
+          {/* <Route path='/' element={<PattePePatta />} /> */}
         </Routes>
       </Router>
     </ErrorBoundary>
