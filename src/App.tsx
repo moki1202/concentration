@@ -4,6 +4,8 @@ import ErrorBoundary from './ErrorBoundary'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import GinRummy from './GinRummy/GinRummy'
+import GameUi from './gameUi/GameUi'
+import CanvasArea from './gameUi/components/CanvasArea'
 
 const config = {
   size: { width: window.innerWidth, height: window.innerHeight },
@@ -27,7 +29,7 @@ const App = () => {
     <ErrorBoundary>
       <Router>
         <Routes>
-          <Route path='/' element={<GinRummy />} />
+          <Route path='/' element={<GameUi />} />
           {/* <Route path='/' element={<Concentration />} />
           <Route path='/winner' element={<WinnerPage />} /> */}
           {/* <Game /> */}
