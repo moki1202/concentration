@@ -73,7 +73,6 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
       onMouseDown={draggable ? (e) => onDragStart(e, id) : undefined}
       onMouseMove={draggable ? (e) => onDragMove(e, id) : undefined}
       onMouseUp={draggable ? (e) => onDragEnd(e, id) : undefined}
-      onMouseLeave={draggable ? (e) => onDragEnd(e, id) : undefined}
     />
   )
 }
@@ -95,7 +94,7 @@ const GinRummy: React.FC = () => {
       await app.init({ background: '#1C1C1C', resizeTo: window })
 
       if (canvasRef.current) {
-        canvasRef.current.appendChild(app.canvas)
+        canvasRef.current.appendChild(app.view)
       }
       appRef.current = app
 
