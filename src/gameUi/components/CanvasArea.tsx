@@ -4,7 +4,6 @@ import '../styles/canvasArea.css'
 import back from '../../assets/front.png' // Ensure the correct path to the asset
 
 const CanvasArea: React.FC = () => {
-  
   const canvasRef = useRef<HTMLDivElement>(null)
   const pixiAppRef = useRef<Application | null>(null)
 

@@ -42,6 +42,28 @@
   background-color: red;
 }
 
+.profile-icon-outer-container {
+  height: 106px;
+  width: 106px;
+  border-radius: 53px;
+  background-color: #faf496;
+  position: absolute;
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-icon-container {
+  height: 100px;
+  width: 100px;
+  border-radius: 54px;
+  background-color: #221e35;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .knock-container-outer {
   display: flex;
