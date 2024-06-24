@@ -26,27 +26,27 @@ const CanvasArea: React.FC = () => {
     container.y = (canvasRef.current!.clientHeight - container.height) / 2
   }
 
-  // Drag event handlers
-  const onDragStart = (event: any) => {
-    const card = event.currentTarget
-    card.data = event.data
-    card.dragging = true
-    card.alpha = 0.5 // Make the card semi-transparent
-  }
-
-  const onDragEnd = (event: any) => {
-    const card = event.currentTarget
-    card.dragging = false
-    card.data = null
-    card.alpha = 1 // Reset the transparency
-  }
+  // Variables to track dragging
+  let dragTarget: Sprite | null = null
 
   const onDragMove = (event: any) => {
-    const card = event.currentTarget
-    if (card.dragging) {
-      const newPosition = card.data.getLocalPosition(card.parent)
-      card.x = newPosition.x
-      card.y = newPosition.y
+    if (dragTarget) {
+      dragTarget.parent.toLocal(event.global, undefined, dragTarget.position)
+    }
+  }
+
+  const onDragStart = (event: any) => {
+    const card = event.currentTarget as Sprite
+    card.alpha = 0.5
+    dragTarget = card
+    pixiAppRef.current!.stage.on('pointermove', onDragMove)
+  }
+
+  const onDragEnd = () => {
+    if (dragTarget) {
+      pixiAppRef.current!.stage.off('pointermove', onDragMove)
+      dragTarget.alpha = 1
+      dragTarget = null
     }
   }
 
@@ -72,9 +72,11 @@ const CanvasArea: React.FC = () => {
       const container = new Container()
       app.stage.addChild(container)
 
-      // Load the card back texture
-      const backTexture = await Assets.load(cardBack)
-      console.log('Card back texture loaded:', backTexture)
+      // Load all front textures
+      const frontTextures = await Promise.all(
+        AllCards.map((cardPath) => Assets.load(cardPath))
+      )
+      console.log('Card front textures loaded:', frontTextures)
 
       // Define card dimensions relative to screen size
       const cardWidth = app.canvas.width * 0.25
@@ -88,6 +90,7 @@ const CanvasArea: React.FC = () => {
         card.height = cardHeight
         card.x = x
         card.y = y
+        card.anchor.set(0.5) // Set anchor to the center of the card
         card.interactive = true
 
         card
@@ -99,19 +102,24 @@ const CanvasArea: React.FC = () => {
         return card
       }
 
-
       // Create the deck of cards at the center
-      const deckX = (app.canvas.width - cardWidth) / 2
-      const deckY = (app.canvas.height - cardHeight) / 2
+      const deckX = canvasRef.current!.clientWidth / 2
+      const deckY = canvasRef.current!.clientHeight / 2
 
-      AllCards.forEach(() => {
-        const card = createCard(backTexture, deckX, deckY)
+      frontTextures.forEach((frontTexture) => {
+        const card = createCard(frontTexture, deckX, deckY)
         container.addChild(card)
       })
 
       // Center the container on the screen
       container.x = 0 // Ensure container is at 0,0
       container.y = 0
+
+      // Set up the stage for pointer events
+      app.stage.eventMode = 'static'
+      app.stage.hitArea = app.screen
+      app.stage.on('pointerup', onDragEnd)
+      app.stage.on('pointerupoutside', onDragEnd)
 
       window.addEventListener('resize', resize)
 
