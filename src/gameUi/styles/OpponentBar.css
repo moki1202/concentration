@@ -1,20 +1,44 @@
-.opponent-bar, .player-bar {
+
+  /* .score-bar {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    background-color: #454350;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .score-bar-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 0; 
+    width: 100%;
+    height: 50%; 
+  } */
+/* .opponent-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/images/Top_Bar.png'); 
     background-size: cover;
     background-position: center;
-    height: 15%;
+    height: 15%; 
   }
-  
-  .opponent-bar {
-    background-image: url('../../assets/images/Top_Bar.png');
-  }
-  
   .player-bar {
-    background-image: url('../../assets/images/Bar.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/images/Bar.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 15%; 
   }
-  
   .settings-button,
   .wifi-button {
     display: flex;
@@ -24,42 +48,40 @@
     background: none;
     border: none;
     cursor: pointer;   
-    width: 12%;
+    width: 12%; 
     aspect-ratio: 1 / 1;
-    background-image: url('../../assets/images/Circle_Button_Holder.png');
+    background-image: url('../../assets/images/Circle_Button_Holder.png'); 
     background-size: cover;
     background-position: center;
     padding: 2%;
   }
-  
-  .wifi-btn-image,
+  .wifi-btn-image , 
   .setting-btn-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  
-  .profile-player-icon-outer-container {
+  .profile-icon-outer-container {
     display: flex;
     justify-content: center;
     align-items: center;
     border: none;
     width: 33%;
     position: relative;
-    margin: 5%;
-    z-index: 100;
-    bottom: 50%;
-  }
-  .profile-opponent-icon-outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    width: 33%;
-    position: relative;
-    margin: 5%;
-    z-index: 100;
     top: 50%;
+    margin: 5%;
+    z-index: 100;
+  }
+  .knock-pass-outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 33%;
+    position: relative;
+    bottom: 50%;
+    margin: 5%;
+    z-index: 100;
   }
   .knock-pass-wrapper {
     position: absolute;
@@ -67,7 +89,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    height: 80%;
+    height: 80%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,20 +103,19 @@
   .knock-text {
     position: absolute;
     color: white;
-    font-size: 1rem; 
+    font-size: 1rem; Adjust font size as needed
     font-weight: bold;
     text-align: center;
   }
-  
   .profile-icon-container {
     border-radius: 50%;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    width: 100%; 
+    height: 100%; 
     object-fit: cover;
   }
   
   .profile-image {
     width: 100%;
     height: 100%; 
-  }
+  } */

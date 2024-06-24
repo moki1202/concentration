@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Application, Assets, Container, Sprite, Texture } from 'pixi.js'
 import '../styles/canvasArea.css'
+
 import cardBack from '../../assets/back-card.png' // Ensure the correct path to the asset
 import { AllCards } from '../data/cardData' // Importing the AllCards array
 
@@ -20,6 +21,7 @@ const CanvasArea: React.FC = () => {
 
     // Center the container on the screen
     const container = app.stage.children[0] as Container
+
     container.x = (canvasRef.current!.clientWidth - container.width) / 2
     container.y = (canvasRef.current!.clientHeight - container.height) / 2
   }
@@ -76,6 +78,7 @@ const CanvasArea: React.FC = () => {
 
       // Define card dimensions relative to screen size
       const cardWidth = app.canvas.width * 0.25
+
       const cardHeight = cardWidth * 1.4
 
       // Function to create a card sprite
@@ -95,6 +98,7 @@ const CanvasArea: React.FC = () => {
 
         return card
       }
+
 
       // Create the deck of cards at the center
       const deckX = (app.canvas.width - cardWidth) / 2
