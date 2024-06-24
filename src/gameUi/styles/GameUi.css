@@ -5,74 +5,16 @@
   height: 100vh;
 }
 
-.top-bar {
-  flex: 1;
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  background-color: #221e35;
-  align-items: center;
-  gap: 50px;
-  height: 15%;
-  z-index: 50;
-}
 
 .bottom-bar {
-  flex: 1;
+  flex: 0 0 10%;
   display: flex;
+  top: -2000px;
   width: 100%;
   justify-content: space-evenly;
-  background-color: #221e35;
   align-items: center;
   gap: 50px;
-  height: 15%;
-}
-
-.settings-button {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: red;
-}
-
-.wifi-button {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: red;
-}
-
-
-.knock-container-outer {
-  display: flex;
-  height: 106px;
-  width: 106px;
-  border-radius: 53px;
-  border: 2px solid #faf496; /* Define border width, style, and color */
-  position: absolute;
-  margin-bottom: 100px; /* Adjusted to position correctly */
   z-index: 100;
-  align-items: center;
-  justify-content: center;
-}
-
-.knock-container {
-  display: flex;
-  height: 100px;
-  width: 100px;
-  border-radius: 53px;
-  background-color: #faf496;
-  position: absolute;
-  margin-bottom: 100px;
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-}
-
-.knock-text {
-  color: #221e35;
-  font-size: 25px;
-  font-weight: 600;
 }
 
 .score-bar {
@@ -92,15 +34,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .canvas-wrapper {
-  flex: 5;
+  flex: 1;
   display: flex;
   width: 100%;
-  height: 70%;
-  /* justify-content: center; */
+  position: relative;
   align-items: center;
+  background-color: #191919;
 }
 
 .card-type {
