@@ -17,11 +17,11 @@ const GameUi: React.FC = () => {
       </div>
       <div className='canvas-wrapper'>
         <CanvasArea />
-      </div>
-      <div className='score-bar-container'>
-        <div className='score-bar'>
-          <div className='card-type'>Deadwood</div>
-          <div className='score'>Score</div>
+        <div className='score-bar-container'>
+          <div className='score-bar'>
+            <div className='card-type'>Deadwood</div>
+            <div className='score'>Score</div>
+          </div>
         </div>
       </div>
       <div className='bottom-bar'>
