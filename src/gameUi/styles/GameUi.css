@@ -34,18 +34,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
   position: absolute;
   bottom: 0;
-  width: 100%;
 }
 
 .canvas-wrapper {
   flex: 1;
   display: flex;
   width: 100%;
-  position: relative;
+
+  height: 70%;
+  position: relative; /* Ensure the score bar container is positioned relative to the canvas */
   align-items: center;
-  background-color: #191919;
+  justify-content: center;
+  background-color: #1c1c1c;
 }
 
 .card-type {
