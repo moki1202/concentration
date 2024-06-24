@@ -1,16 +1,15 @@
 import React from 'react'
 import './styles/GameUi.css'
 import CanvasArea from './components/CanvasArea'
-import OpponentBar from './components/OpponentBar'
-import PlayerBar from './components/PlayerBar'
+import Bar from './components/Bar'
 const GameUi: React.FC = () => {
   return (
     <div className='game-ui'>
-      <OpponentBar />
+      <Bar position="opponent" />
       <div className='canvas-wrapper'>
         <CanvasArea />
       </div>
-      <PlayerBar />
+      <Bar position="player" />
     </div>
   )
 }
