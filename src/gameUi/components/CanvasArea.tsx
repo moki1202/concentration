@@ -152,6 +152,7 @@ const CanvasArea: React.FC = () => {
       right_watermark.interactive = false
       right_watermark.zIndex = 0
 
+
       container.addChild(right_watermark)
 
       // Set up the stage for pointer events
