@@ -105,6 +105,7 @@ const CanvasArea: React.FC = () => {
         card.y = y
         card.anchor.set(0.5) // Set anchor to the center of the card
         card.interactive = true
+        card.zIndex = 1
 
         card
           .on('pointerdown', on_drag_start)
@@ -137,6 +138,7 @@ const CanvasArea: React.FC = () => {
       left_watermark.y = canvas_ref.current!.clientHeight / 2 // Adjust position as needed
       left_watermark.interactive = false
       left_watermark.scale.x = -0.35 // Mirror horizontally
+      left_watermark.zIndex = 0
 
       container.addChild(left_watermark)
 
@@ -148,6 +150,8 @@ const CanvasArea: React.FC = () => {
       right_watermark.x = canvas_ref.current!.clientWidth / 1.2 // Adjust position as needed
       right_watermark.y = canvas_ref.current!.clientHeight / 2 // Adjust position as needed
       right_watermark.interactive = false
+      right_watermark.zIndex = 0
+
 
       container.addChild(right_watermark)
 
