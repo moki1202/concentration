@@ -3,8 +3,9 @@ import '@pixi/events'
 import ErrorBoundary from './ErrorBoundary'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import GinRummy from './GinRummy/GinRummy'
+import GinRummy from './GinRummy/GinRummy'
 import GameUi from './gameUi/GameUi'
+import PracticeUi from './PracticeUi/PracticeUi'
 // import CanvasArea from './gameUi/components/CanvasArea'
 
 // const config = {
