@@ -28,6 +28,7 @@
     "@pixi/text-bitmap": "^7.4.2",
     "@pixi/ticker": "^7.4.2",
     "@react-spring/web": "^9.7.3",
+    "@sentry/vite-plugin": "^2.20.1",
     "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "path": "^0.12.7",
@@ -35,7 +36,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
-    "react-spring": "^9.7.3"
+    "react-spring": "^9.7.3",
+    "sass": "^1.77.6"
   },
   "devDependencies": {
     "@types/lodash": "^4.17.4",

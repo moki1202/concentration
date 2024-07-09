@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+  overflow: scroll;
+}
+
+.navbar-container {
+  background-color: #222222;
+  flex: 1;
+  display: flex;
+
+  .icon-tab {
+    flex: 1;
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
+    padding: 10% 0;
+
+    .header-icon {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .items-icon {
+      flex: 8;
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.5rem;
+
+      .options-icon {
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .help-center-icon {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+    }
+    .profile-icon {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+  .menu-tab {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+
+    .menu-header {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-weight: 600;
+      font-size: 1.5rem;
+      padding-left: 0.5rem;
+    }
+    .menu-items {
+      flex: 8;
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.5rem;
+
+      .options {
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .menu-item {
+          color: white;
+          font-weight: 500;
+          font-size: small;
+          padding: 0.5rem;
+          border-radius: 5%;
+
+          &:hover {
+            background-color: #e5f33c;
+            color: black;
+            cursor: pointer;
+          }
+        }
+      }
+      .help-center {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .help-item {
+          color: white;
+          font-weight: 500;
+          font-size: small;
+          padding: 0.5rem;
+          border-radius: 5%;
+
+          &:hover {
+            background-color: #e5f33c;
+            color: black;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .menu-profile {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-left: 10%;
+      color: white;
+      font-weight: 500;
+      font-size: small;
+      cursor: pointer;
+    }
+  }
+}
+
+.transaction-container {
+  background-color: transparent;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  .card-info {
+    flex: 2;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    .card-heading {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .card-icon {
+      width: 100%;
+      position: relative;
+      margin-top: -3rem;
+    }
+    .credit-details-container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      position: relative;
+      margin-top: -3rem;
+
+      .credit-detail {
+        display: flex;
+        background-color: #dbdbdb;
+        padding: 1rem 0 1rem 0.75rem;
+        border-radius: 0.75rem;
+
+        .credit-detail-text {
+          font-weight: 600;
+          font-size: large;
+        }
+      }
+    }
+  }
+  .quick-transaction {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    gap: 2rem;
+
+    .quick-transaction-header {
+      font-size: larger;
+      font-weight: 700;
+      flex: 1;
+    }
+    .profile-container {
+      flex: 20;
+      display: flex;
+      gap: 2rem;
+      overflow: hidden;
+      align-items: center;
+    }
+  }
+}
+
+.info-container {
+  flex: 3;
+  background-color: #ffffff;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  padding: 3%;
+
+  .subscription {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .subscription-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .subscription-text {
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      .manage-button {
+        padding: 10px 20px 10px 20px;
+        color: white;
+        font-weight: 300;
+        background-color: #1d1d1d;
+        border-radius: 7px;
+      }
+    }
+  }
+  .spending-limit {
+    flex: 1;
+    background-color: aqua;
+  }
+  .issue-access {
+    flex: 1;
+    background-color: blueviolet;
+  }
+  .recent-transaction {
+    flex: 2.5;
+    background-color: burlywood;
+  }
+}

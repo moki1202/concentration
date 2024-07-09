@@ -9,11 +9,11 @@
 }
 
 .opponent-bar {
-  background-image: url('../../assets/images/Top_Bar.png');
+  background-image: url('src/assets/images/gamescreen_images/top_bar.png');
 }
 
 .player-bar {
-  background-image: url('../../assets/images/Bar.png');
+  background-image: url('src/assets/images/gamescreen_images/bar.png');
 }
 
 .settings-button,
@@ -27,7 +27,7 @@
   cursor: pointer;
   width: 12%;
   aspect-ratio: 1 / 1;
-  background-image: url('../../assets/images/Circle_Button_Holder.png');
+  background-image: url('src/assets/images/gamescreen_images/circle_button_holder.png');
   background-size: cover;
   background-position: center;
   padding: 2%;
